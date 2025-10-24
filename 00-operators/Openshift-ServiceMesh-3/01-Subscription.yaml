@@ -1,0 +1,12 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: servicemeshoperator3
+  namespace: openshift-operators
+  labels:
+    operators.coreos.com/servicemeshoperator3.openshift-operators: ""
+spec:
+  channel: stable
+  name: servicemeshoperator3
+  source: redhat-operators 
+  sourceNamespace: openshift-marketplace

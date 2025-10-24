@@ -3,9 +3,11 @@ kind: Subscription
 metadata:
   name: openshift-gitops-operator
   namespace: openshift-gitops-operator
+  labels:
+    operators.coreos.com/openshift-gitops-operator.openshift-gitops-operator: ""
 spec:
   channel: latest 
-  installPlanApproval: Automatic
+  # installPlanApproval: Automatic
   name: openshift-gitops-operator 
   source: redhat-operators 
   sourceNamespace: openshift-marketplace 

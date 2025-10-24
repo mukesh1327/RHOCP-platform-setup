@@ -1,0 +1,14 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: openshift-operators-redhat
+  labels:
+    openshift.io/cluster-monitoring: 'true'
+    security.openshift.io/scc.podSecurityLabelSync: "true"
+  annotations:
+    openshift.io/description: ''
+    openshift.io/display-name: ''
+    openshift.io/requester: ''
+    # openshift.io/sa.scc.mcs: s0:c29,c24
+    # openshift.io/sa.scc.supplemental-groups: 1000860000/10000
+    # openshift.io/sa.scc.uid-range: 1000860000/10000

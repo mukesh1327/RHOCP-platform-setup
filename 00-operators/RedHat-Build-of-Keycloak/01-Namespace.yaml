@@ -1,0 +1,14 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: rhbk-operator
+  labels:
+    openshift.io/cluster-monitoring: 'true'
+    security.openshift.io/scc.podSecurityLabelSync: "true"
+  annotations:
+    openshift.io/description: ''
+    openshift.io/display-name: ''
+    openshift.io/requester: ''
+  #   openshift.io/sa.scc.mcs: 's0:c32,c14'
+  #   openshift.io/sa.scc.supplemental-groups: 1001020000/10000
+  #   openshift.io/sa.scc.uid-range: 1001020000/10000

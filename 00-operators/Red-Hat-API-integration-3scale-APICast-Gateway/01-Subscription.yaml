@@ -1,0 +1,14 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  labels:
+    operators.coreos.com/apicast-operator.openshift-operators: ""
+  name: apicast-operator
+  namespace: openshift-operators
+spec:
+  channel: threescale-2.15
+  name: apicast-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  # startingCSV: apicast-operator.v0.12.5
+  # installPlanApproval: Automatic

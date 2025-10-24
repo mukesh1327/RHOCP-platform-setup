@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gitlab-system
+
+  # annotations:
+  #   openshift.io/sa.scc.mcs: s0:c27,c14
+  #   openshift.io/sa.scc.supplemental-groups: 1000730000/10000
+  #   openshift.io/sa.scc.uid-range: 1000730000/10000
+  # labels:
+  #   kubernetes.io/metadata.name: gitlab-system
+  #   olm.operatorgroup.uid/7175bf75-903b-4f56-82d8-47e53fb530a9: ""
+  #   pod-security.kubernetes.io/audit: restricted
+  #   pod-security.kubernetes.io/audit-version: latest
+  #   pod-security.kubernetes.io/warn: restricted
+  #   pod-security.kubernetes.io/warn-version: latest
