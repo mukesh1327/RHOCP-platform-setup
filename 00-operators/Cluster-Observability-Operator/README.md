@@ -1,1 +1,0 @@
-# Cluster Observability Operator

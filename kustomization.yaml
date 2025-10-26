@@ -1,0 +1,86 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+
+# API Manager
+
+  ## 3scale API Management
+  - 01-Operators/Red-Hat-API-integration-3scale/01-Subscription.yaml
+
+  ## 3scale API Management - APICast Gateway
+  - 01-Operators/Red-Hat-API-integration-3scale-APICast-Gateway/01-Subscription.yaml
+
+# App Development
+  
+  ## Developer Hub
+  - 01-Operators/Openshift-DeveloperHub/01-Namespace.yaml
+  - 01-Operators/Openshift-DeveloperHub/02-Subscription.yaml
+
+  ## DevSpaces
+  - 01-Operators/Openshift-DevSpaces/01-Subscription.yaml
+
+# App Management
+
+  ## Service Mesh
+  - 01-Operators/Openshift-ServiceMesh-3/01-Subscription.yaml
+
+  ## Keycloak
+  - 01-Operators/Red-Hat-Build-of-Keycloak/01-Namespace.yaml
+  - 01-Operators/Red-Hat-Build-of-Keycloak/02-OperatorGroup.yaml
+  - 01-Operators/Red-Hat-Build-of-Keycloak/03-Subscription.yaml
+
+# Backup
+
+  ## OADP
+  - 01-Operators/Openshift-OADP-backup/01-Namespace.yaml
+  - 01-Operators/Openshift-OADP-backup/02-OperatorGroup.yaml
+  - 01-Operators/Openshift-OADP-backup/03-Subscription.yaml
+
+# CI/CD
+
+  ## Pipelines
+  - 01-Operators/Openshift-Pipelines/01-Subscription.yaml
+
+  ## GitOps
+  - 01-Operators/Openshift-GitOps/01-Namespace.yaml
+  - 01-Operators/Openshift-GitOps/02-OperatorGroup.yaml
+  - 01-Operators/Openshift-GitOps/03-Subscription.yaml
+
+# Dev Repos
+  
+  ## GitLab
+  - 01-Operators/GitLab/01-Namespace.yaml
+  - 01-Operators/GitLab/02-OperatorGroup.yaml
+  - 01-Operators/GitLab/03-Subscription.yaml
+  
+  ## Container Registry
+  - 01-Operators/Quay/01-Subscription.yaml
+
+# Observability
+
+  ## OpenTelemetry
+  - 01-Operators/Red-Hat-Build-of-OpenTelemetry/01-Namespace.yaml
+  - 01-Operators/Red-Hat-Build-of-OpenTelemetry/02-Subscription.yaml
+
+  ## Loki Stack 
+  - 01-Operators/Red-Hat-Loki-Stack/01-Namespace.yaml
+  - 01-Operators/Red-Hat-Loki-Stack/02-OperatorGroup.yaml
+  - 01-Operators/Red-Hat-Loki-Stack/03-Subscription.yaml
+
+  - 01-Operators/Red-Hat-TempoStack/01-Namespace.yaml
+  - 01-Operators/Red-Hat-TempoStack/02-OperatorGroup.yaml
+  - 01-Operators/Red-Hat-TempoStack/03-Subscription.yaml
+
+  ## Cluster Observability
+  - 01-Operators/Cluster-Observability-Operator/01-Namespace.yaml
+  - 01-Operators/Cluster-Observability-Operator/02-OperatorGroup.yaml
+  - 01-Operators/Cluster-Observability-Operator/03-Subscription.yaml
+
+# Runtimes and Streaming
+
+  ## Kafka
+  - 01-Operators/Openshift-Streams-for-Apache-Kafka/01-Subscription.yaml
+
+  ## Kafka Console
+  - 01-Operators/Openshift-Streams-for-Apache-Kafka-console/01-Subscription.yaml
