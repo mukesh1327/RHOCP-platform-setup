@@ -9,6 +9,8 @@ metadata:
     operators.coreos.com/vault-secrets-operator.openshift-operators: ""
 
 spec:
+  config: {}
+    # env: https://developer.hashicorp.com/vault/docs/deploy/kubernetes/vso/openshift
   channel: stable
   name: vault-secrets-operator
   source: certified-operators
