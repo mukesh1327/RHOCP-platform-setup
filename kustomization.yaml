@@ -3,6 +3,23 @@ kind: Kustomization
 
 resources:
 
+# Multicluster Management
+
+  ## Advanced Cluster Management
+  - 01-Operators/Advanced-Cluster-Management/01-Namespace.yaml
+  - 01-Operators/Advanced-Cluster-Management/02-OperatorGroup.yaml
+  - 01-Operators/Advanced-Cluster-Management/03-Subscription.yaml
+
+  ## MultiCluster Engine
+  - 01-Operators/MultiCluster-Engine/01-Namespace.yaml
+  - 01-Operators/MultiCluster-Engine/02-OperatorGroup.yaml
+  - 01-Operators/MultiCluster-Engine/03-Subscription.yaml
+
+  ## Advanced Cluster Security
+  - 01-Operators/Advanced-Cluster-Security/01-Namespace.yaml 
+  - 01-Operators/Advanced-Cluster-Security/02-OperatorGroup.yaml
+  - 01-Operators/Advanced-Cluster-Security/03-Subscription.yaml
+
 # API Manager
 
   ## 3scale API Management
