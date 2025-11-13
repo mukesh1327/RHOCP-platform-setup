@@ -1,0 +1,12 @@
+kind: Console
+apiVersion: console.streamshub.github.com/v1alpha1
+metadata:
+  name: kafka-demo-console
+
+spec:
+  hostname: kafka-demo.apps.demoocp.domain.com
+  kafkaClusters:
+    - name: kafka-demo-cluster
+      namespace: demo-ns
+      listener: plain
+  

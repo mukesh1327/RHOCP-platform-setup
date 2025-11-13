@@ -1,0 +1,19 @@
+kind: KafkaNodePool
+apiVersion: kafka.strimzi.io/v1beta2
+metadata:
+
+  name: kafka-demo-pool
+  labels:
+    strimzi.io/cluster: kafka-demo-cluster
+
+spec:
+
+  replicas: 3
+  
+  roles:
+    - broker
+    - controller
+
+  storage:
+    type: persistent-claim
+    size: 10Gi
