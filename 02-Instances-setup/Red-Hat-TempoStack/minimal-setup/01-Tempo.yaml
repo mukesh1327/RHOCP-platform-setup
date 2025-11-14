@@ -1,0 +1,23 @@
+kind: TempoStack
+apiVersion: tempo.grafana.com/v1alpha1
+metadata:
+  name: tempo-trace-demo
+
+spec:
+  managementState: Managed
+  resources:
+    total:
+      limits:
+        cpu: 1000m
+        memory: 1.5Gi
+  storage:
+    secret:
+      name: tempo-bucket-secret
+      type: s3
+  storageSize: 3Gi
+  template:
+    queryFrontend:
+      jaegerQuery:
+        enabled: true
+        ingress:
+          type: route
