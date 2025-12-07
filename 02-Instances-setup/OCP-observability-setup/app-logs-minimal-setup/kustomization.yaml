@@ -4,10 +4,12 @@ resources:
 
   - observe-demo-namespace.yaml
 
-  - minio-s3-deployment-secret.yaml
-  - minio-s3-deployment-pvc.yaml
-  - minio-s3-deployment.yaml
-  - minio-s3-deployment-service.yaml
+  # - minio-s3-deployment-secret.yaml
+  # - minio-s3-deployment-pvc.yaml
+  # - minio-s3-deployment.yaml
+  # - minio-s3-deployment-service.yaml
+
+  - odf-s3-bucket.yaml
 
   - lokistack-bucket-secret.yaml
   - lokistack-logging.yaml
