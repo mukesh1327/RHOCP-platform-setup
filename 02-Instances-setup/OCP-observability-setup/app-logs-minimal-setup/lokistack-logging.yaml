@@ -1,0 +1,30 @@
+apiVersion: loki.grafana.com/v1
+kind: LokiStack
+metadata:
+
+  name: loki-logging
+  namespace: openshift-logging
+
+spec:
+
+  limits:
+    global:
+      otlp: {}
+    tenants:
+      application:
+        otlp: {}
+
+  managementState: Managed
+  size: 1x.demo
+  storage:
+    schemas:
+      - effectiveDate: '2024-10-25'
+        version: v13
+    secret:
+      name: loki-bucket-secret
+      type: s3
+
+  storageClassName: ocs-storagecluster-ceph-rbd
+
+  tenants:
+    mode: openshift-logging

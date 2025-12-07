@@ -1,0 +1,21 @@
+resources:
+
+  # - openshift-logging-namespace.yaml
+
+  - observe-demo-namespace.yaml
+
+  - minio-s3-deployment-secret.yaml
+  - minio-s3-deployment-pvc.yaml
+  - minio-s3-deployment.yaml
+  - minio-s3-deployment-service.yaml
+
+  - lokistack-bucket-secret.yaml
+  - lokistack-logging.yaml
+
+  - openshift-logging-cluster-log-forwarder.yaml
+
+  - uiplugin.yaml
+
+  # - otel-collector.yaml
+  # - otel-collector-clusterrolebinding.yaml
+  # - otel-collector-clusterrole.yaml
